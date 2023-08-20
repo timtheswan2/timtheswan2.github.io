@@ -1,0 +1,61 @@
+<button class="button" id="my-button">click me!</button>
+<button class="button" id="my-animated-button">click me!</button>
+
+<style>
+  .button {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    width: 100px;
+  }
+  #my-button {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+  }
+  #my-animated-button {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s cubic-bezier(0.16, 0, 0.44, 1.01);
+  }
+</style>
+
+<script>
+  // Get the button element
+  const myButton = document.getElementById("my-button");
+
+  // Add a click handler to the button
+  myButton.addEventListener("click", () => {
+    // Get the current position of the button
+    const currentPosition = myButton.style.left;
+
+    // If the button is on the right side of the screen, move it to the left side
+    if (currentPosition === "50%") {
+      myButton.style.left = "10%";
+    } else {
+      // Otherwise, move it back to the right side
+      myButton.style.left = "50%";
+    }
+  });
+
+  // Get the animated button element
+  const myAnimatedButton = document.getElementById("my-animated-button");
+
+  // Add a click handler to the animated button
+  myAnimatedButton.addEventListener("click", () => {
+    // Get the current position of the button
+    const currentPosition = myAnimatedButton.style.left;
+
+    // If the button is on the right side of the screen, move it to the left side
+    if (currentPosition === "50%") {
+      myAnimatedButton.style.left = "10%";
+    } else {
+      // Otherwise, move it back to the right side
+      myAnimatedButton.style.left = "50%";
+    }
+  });
+</script>
