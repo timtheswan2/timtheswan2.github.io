@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation Playground</title>
+    <style>
+      /* Add your global styles here */
+      #element1:hover {
+        background-color: red;
+      }
+
+      #element2 {
+        cursor: pointer; /* Add a pointer cursor to indicate clickability */
+      }
+
+      #element2.clicked {
+        transform: rotate(45deg); /* Rotate by 45 degrees on click */
+      }
+
+      #element3 {
+        animation: fade-in 1s ease-in-out 1s backwards;
+      }
+
+      body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* You can style these elements further in your CSS animations */
+      .animated-element {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        margin: 20px;
+        display: inline-flex; /* Use flex to center text vertically */
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        text-align: center; /* Center text horizontally */
+        transition: all 0.3s ease-in-out;
+      }
+
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Add more CSS animation styles here */
+    </style>
+  </head>
+  <body>
+    <h1>CSS Animation Playground</h1>
+    <div class="animated-element" id="element1">Hover me to change color</div>
+
+    <div class="animated-element" id="element2">Click me to rotate</div>
+
+    <div class="animated-element" id="element3">Watch me fade!</div>
+
+    <!-- You can add more elements here -->
+
+    <script>
+      // JavaScript for adding interactivity (if needed)
+      // You can add JavaScript code to trigger animations here
+
+      // JavaScript code to handle the click event for the second element
+      const element2 = document.getElementById("element2");
+      element2.addEventListener("click", () => {
+        element2.classList.toggle("clicked");
+      });
+    </script>
+  </body>
+</html>
