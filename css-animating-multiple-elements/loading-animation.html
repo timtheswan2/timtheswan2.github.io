@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Loading Animation</title>
+    <style>
+      .loading {
+        width: 20px;
+        height: 20px;
+        background-color: blue;
+        border-radius: 50%;
+        position: absolute;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* This centers vertically */
+        perspective: 1000px; /* Adjust the perspective depth */
+      }
+      .loading:nth-child(1) {
+        animation: rotate 2s ease-in-out infinite;
+      }
+      .loading:nth-child(2) {
+        animation: rotate 2s ease-out infinite 0.2s;
+      }
+      .loading:nth-child(3) {
+        animation: rotate 2s ease-out infinite 0.4s;
+      }
+      .loading:nth-child(4) {
+        animation: rotate 2s ease-out infinite 0.6s;
+      }
+      .loading:nth-child(5) {
+        animation: rotate 2s ease-out infinite 0.8s;
+      }
+      .loading:nth-child(6) {
+        animation: rotate 2s ease-out infinite 1s;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotateX(410deg) rotateY(0deg) translateX(100px)
+            rotateZ(45deg);
+        }
+        100% {
+          transform: rotateX(50deg) rotateY(360deg) translateX(100px)
+            rotateZ(45deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Loading Animation</h1>
+    <div class="container">
+      <div class="animation-frame">
+        <div class="loading"></div>
+        <div class="loading"></div>
+        <div class="loading"></div>
+        <div class="loading"></div>
+        <div class="loading"></div>
+        <div class="loading"></div>
+      </div>
+    </div>
+  </body>
+</html>
