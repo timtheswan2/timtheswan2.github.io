@@ -14,14 +14,13 @@
 			}      
 		}
     	.wheel{
-	        animation: spin 1s linear infinite 0.8s;
+	        animation: spin 1s linear infinite;
     	}
 		#wheel-1 {
-			  transform-origin: 95px 392px;
+			  transform-origin: 95px 392px; 
 		}
 		#wheel-2 {
 			  transform-origin: 416px 390px;
-
 		}
 		@keyframes bounce {
 			0% {
@@ -32,7 +31,7 @@
 			}
 		}
 		#car {
-	        animation: bounce 1s linear infinite 0.8s;
+	        animation: bounce 1s ease-in-out infinite;
 
 		}
 		
