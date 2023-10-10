@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigational CSS Animation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- You can link your CSS file here -->
+  </head>
+  <body>
+    <!-- Top Nav Bar -->
+    <header>
+      <nav class="top-nav">
+        <div class="logo-and-text">
+          <div class="logo">
+            <!-- Logo Placeholder -->
+            <img src="parrot.png" alt="Logo" />
+          </div>
+          <div class="text">
+            <h1>ParrotPal</h1>
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <!-- Hamburger Menu Icon -->
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Sidebar Content -->
+      <ul class="sidebar-links">
+        <li><a href="#">Section 1</a></li>
+        <li><a href="#">Section 2</a></li>
+        <li><a href="#">Section 3</a></li>
+        <li><a href="#">Section 4</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main >
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Welcome to ParrotPal</h1>
+                <p>Your community for all things parrots!</p>
+            </div>
+            <div class="parrot-image">
+                <img style="width:600px" src="parrots.png" alt="Parrot Image">
+            </div>
+        </section>
+        <section class="wide-card">
+            <div class="card outlined">
+                <h2> Get to Know ParrotPal</h2>
+                <p>
+                    At ParrotPal, we're passionate about parrots! We're a community of parrot enthusiasts, conservationists, and experts dedicated to celebrating the beauty and intelligence of these incredible birds. Our mission is to educate, connect, and inspire parrot lovers worldwide.
+                </p><p>
+                    Our Story:
+                    Founded by a group of bird enthusiasts, ParrotPal started as a small online forum to share parrot stories and experiences. Over the years, it has grown into a global community where parrot owners, bird lovers, and experts come together to learn, share, and support one another.
+                </p>  <p>
+    
+                    Join Us Today:
+                    Whether you're a proud parrot owner or simply admire these feathered friends, we invite you to be a part of our ParrotPal community. Together, we celebrate the colorful world of parrots and work towards their protection and well-being. Join us today and let's spread our wings together!
+                </p>
+            </div>
+        </section>
+
+        <section class="flying-in">
+          <div class="column">
+              <h2>We're glad you flew in!</h2>
+              <p>To join our community, go to example.com</p>
+          </div>
+          <div class="column">
+              <img src="flying-parrot.png" alt="Parrot Image">
+          </div>
+      </section>
+
+        <section class="summary-cards">
+      <!-- Flexbox Cards -->
+      <div class="card filled">
+        <h2>Explore the Vibrant World of Parrots</h2>
+        <p>Embark on a journey through tropical rainforests to discover the vibrant world of parrots. Book your Parrot Paradise Getaway for an unforgettable experience with these colorful birds.</p>
+      </div>
+      <div class="card filled">
+        <h2> Expert Parrot Care</h2>
+        <p>
+            Learn essential parrot care tips, from nutrition to creating a safe environment for your feathered friend. Keep your parrot healthy and happy with our comprehensive guide.
+        </p>
+      </div>
+      <div class="card filled">
+        <h2>Join Our Parrot Community</h2>
+        <p>Connect with parrot enthusiasts worldwide in the ParrotPal Community. Share stories, learn from experts, and be part of our global parrot-loving family. Join today!</p>
+      </div>
+    </section>
+
+  
+
+    
+    </main>
+
+    <!-- Include JavaScript for sidebar functionality -->
+<script>
+    // Get references to the menu elements
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const body = document.querySelector('body');
+
+    // Function to open the sidebar
+    function openSidebar() {
+        sidebar.style.left = '0';
+        body.style.overflow = 'hidden'; // Prevent scrolling when the sidebar is open
+    }
+
+    // Function to close the sidebar
+    function closeSidebar() {
+        sidebar.style.left = '-250px'; // Adjust the width of the sidebar
+        body.style.overflow = 'auto'; // Enable scrolling when the sidebar is closed
+    }
+
+    // Event listener for the menu toggle button
+    menuToggle.addEventListener('click', () => {
+        const sidebarIsOpen = sidebar.style.left === '0px';
+        if (sidebarIsOpen) {
+            closeSidebar();
+        } else {
+            openSidebar();
+        }
+    });
+</script>
+</body>
+</html>
+
+  </body>
+</html>

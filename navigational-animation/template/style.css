@@ -1,0 +1,247 @@
+/* Set the color palette variables */
+:root {
+  --primary-color: #add8e6;
+  --secondary-color: #dea140;
+  --accent-color: #ef5b5b;
+  --background-color: #23001e;
+}
+
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set background color for the body */
+body {
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+}
+
+main {
+  max-width: 1200px; /* Set the maximum width */
+  margin: 0 auto; /* Center align the content horizontally */
+}
+
+/* Top Nav Bar styles */
+header {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 10px 0;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Style the logo and text */
+.logo-and-text {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 50px;
+}
+
+.text h1 {
+  font-family: "Pacifico", sans-serif; /* Use the chosen custom font */
+  font-size: 24px; /* Adjust the font size as needed */
+  margin-left: 10px; /* Add some spacing between the logo and text */
+}
+
+/* Style the navigation links */
+.nav-links {
+  margin-left: 30px;
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--background-color); /* Use the secondary color for nav links */
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color); /* Use the accent color on hover */
+}
+
+/* Hamburger Menu styles */
+.menu-toggle {
+  width: 70px;
+  flex-direction: column;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.bar {
+  background-color: var(--background-color);
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: var(
+    --primary-color
+  ); /* Use the primary color for the sidebar */
+  color: #fff;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  overflow-y: scroll;
+}
+
+/* Style the sidebar links */
+.sidebar-links {
+  list-style: none;
+  padding: 20px;
+}
+
+.sidebar-links li {
+  margin-bottom: 10px;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: var(--secondary-color); /* Use the secondary color for sidebar links */
+  font-weight: bold;
+}
+
+.sidebar-links a:hover {
+  color: var(--accent-color); /* Use the accent color on hover */
+}
+
+/* Main Content Area styles */
+.summary-cards {
+  margin-left: 0;
+  padding: 20px;
+  margin-top: 60px; /* Account for the top nav bar */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.wide-card {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Style the cards */
+.card {
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  /* Adjust based on your desired layout */
+  /* flex-basis: calc(33.33% - 20px); */
+  color: var(--accent-color); /* Use the accent color for card text */
+}
+
+.card.filled {
+  max-width: 350px;
+  background-color: var(--primary-color);
+}
+.card.outlined {
+  border: solid 2px #add8e6;
+  background: none;
+  color: var(--primary-color);
+}
+
+.card p {
+  margin-top: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.card.filled p {
+  color: var(--background-color);
+  max-width: 300px;
+}
+.card.outlined {
+  color: var(--primary-color);
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 30px;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .sidebar {
+    left: 0;
+  }
+}
+
+/* Apply styles to the hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px; /* Adjust the padding as needed */
+  max-width: 1500px; /* Set a maximum width for the hero section */
+  margin: 0 auto; /* Center align the hero section horizontally */
+}
+
+/* Style the hero text */
+.hero-text {
+  color: #fff; /* Set text color */
+  flex: 1; /* Allow the text to grow and fill available space */
+}
+
+.hero-text h1 {
+  font-size: 36px; /* Set the font size for the header */
+  margin-bottom: 10px; /* Add some spacing between header and paragraph */
+}
+
+/* Style the parrot image */
+.parrot-image img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+}
+
+/* Style the flying-in section */
+.flying-in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px; /* Adjust the padding as needed */
+  max-width: 1500px; /* Set a maximum width for the section */
+  margin: 0 auto; /* Center align the section horizontally */
+  color: #add8e6;
+}
+
+/* Style the columns */
+.column {
+  flex: 1; /* Allow each column to grow and fill available space */
+}
+
+/* Style the text column */
+.column h2 {
+  font-size: 24px; /* Set the font size for the heading */
+  margin-bottom: 10px; /* Add some spacing between heading and paragraph */
+}
+
+/* Style the image column */
+.column img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+}
