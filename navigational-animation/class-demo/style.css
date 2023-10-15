@@ -33,6 +33,17 @@ header {
   background-color: var(--primary-color);
   color: var(--background-color);
   padding: 10px 0;
+  position: sticky;
+  top: 0; /* Stick the navigation bar at the top of the viewport */
+  background-color: #add8e6; /* Optional: Set a background color */
+  z-index: 100; /* Optional: Set a z-index to ensure it's above other content */
+  height: 50px;
+  transition: all 0.5s ease-in-out;
+}
+
+header.sticky {
+  height: 30px;
+  background-color: #add8e662; /* Optional: Set a background color */
 }
 
 .top-nav {
@@ -42,6 +53,11 @@ header {
   /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 20px;
+  transition: all 0.5s ease-in-out;
+  height: 50px;
+}
+.top-nav.sticky {
+  height: 30px;
 }
 
 /* Style the logo and text */
@@ -110,6 +126,8 @@ header {
   top: 0;
   right: -250px;
   overflow-y: scroll;
+  transition: all 0.5s ease-out;
+  z-index: -1;
 }
 
 /* Style the sidebar links */
@@ -155,12 +173,18 @@ header {
   /* Adjust based on your desired layout */
   /* flex-basis: calc(33.33% - 20px); */
   color: var(--accent-color); /* Use the accent color for card text */
+  transition: all 1s ease-in-out;
 }
 
 .card.filled {
   max-width: 350px;
   background-color: var(--primary-color);
 }
+
+.card.filled:hover > p {
+  color: var(--secondary-color);
+}
+
 .card.outlined {
   border: solid 2px #add8e6;
   background: none;
@@ -219,6 +243,17 @@ header {
   max-width: 100%; /* Ensure the image doesn't exceed its container's width */
 }
 
+#flying-parrot {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  transform: translateX(100px);
+}
+
+#flying-parrot.fly-in {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
 /* Style the flying-in section */
 .flying-in {
   display: flex;
@@ -244,4 +279,8 @@ header {
 /* Style the image column */
 .column img {
   max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+}
+
+#parrot-care:target {
+  scale: 1.2;
 }

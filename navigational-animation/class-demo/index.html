@@ -59,7 +59,9 @@
                 <p>Your community for all things parrots!</p>
             </div>
             <div class="parrot-image">
+              <a href="#parrot-care">
                 <img style="width:600px" src="parrots.png" alt="Parrot Image">
+              </a>
             </div>
         </section>
         <section class="wide-card">
@@ -84,7 +86,7 @@
               <p>To join our community, go to example.com</p>
           </div>
           <div class="column">
-              <img src="flying-parrot.png" alt="Parrot Image">
+              <img id="flying-parrot" src="flying-parrot.png" alt="Parrot Image">
           </div>
       </section>
 
@@ -94,7 +96,7 @@
         <h2>Explore the Vibrant World of Parrots</h2>
         <p>Embark on a journey through tropical rainforests to discover the vibrant world of parrots. Book your Parrot Paradise Getaway for an unforgettable experience with these colorful birds.</p>
       </div>
-      <div class="card filled">
+      <div id="parrot-care" class="card filled">
         <h2> Expert Parrot Care</h2>
         <p>
             Learn essential parrot care tips, from nutrition to creating a safe environment for your feathered friend. Keep your parrot healthy and happy with our comprehensive guide.
@@ -139,6 +141,40 @@
             openSidebar();
         }
     });
+
+    // Animate parrot flying in
+    const observer = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+      // If the element is visible
+      if (entry.isIntersecting) {
+        // Add the animation class
+        entry.target.classList.add('fly-in');
+      }
+    });
+
+
+    // JavaScript to add a class when the navigation bar becomes sticky
+window.addEventListener('scroll', function() {
+
+    var header = document.querySelector('header');
+    var nav = document.querySelector('.top-nav');
+    var scrollPosition = window.scrollY;
+
+    if (scrollPosition > 0) {
+        header.classList.add('sticky');
+        nav.classList.add('sticky');
+
+    } else {
+        header.classList.remove('sticky');
+        nav.classList.remove('sticky');
+    }
+});
+  });
+
+  observer.observe(document.querySelector('#flying-parrot'));
+
+
 </script>
 </body>
 </html>
