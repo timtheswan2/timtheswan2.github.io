@@ -3,11 +3,11 @@
   <defs>
     <style>
     #Graphic_Element-12{
-      	        animation: popup 1s cubic-bezier(.01,1.04,.68,1) alternate;
+      	        animation: popup 1s cubic-bezier(.01,1.04,.68,1) infinite alternate;
 
     }
     #dot {
-      	        animation: zoom 1s cubic-bezier(.01,1.04,.68,1) alternate;
+      	        animation: zoom 1s cubic-bezier(.01,1.04,.68,1) infinite alternate;
 
     }
     <!-- @keyframes popup {
@@ -19,7 +19,7 @@
       }
     } -->
     @keyframes zoom {
-        0% {
+        0%, 10% {
             opacity: 0;
         }
       30% {
@@ -27,14 +27,15 @@
         transform: translateY(100px);
       }
       
-      100%{
+      
+      90%, 100%{
         opacity: 1;
         transform: translateY(0px);
 
     }       
 		}
      @keyframes popup {
-			0% {
+			0%, 10% {
 				transform: translateY(200px);
         opacity: 0
 			}
@@ -43,7 +44,7 @@
         transform: translateY(-100px);
       }
       
-      100%{
+      90%,100%{
 				transform: translateY(0px);
 
 			}      
