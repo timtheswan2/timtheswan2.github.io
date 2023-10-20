@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Advanced Animation</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* This centers vertically */
+        perspective: 1000px; /* Adjust the perspective depth */
+      }
+      #hourglass {
+        transform-box: fill-box;
+        transform-origin: 157px 72px;
+        animation: rotateHourglass 3s ease-in 0s infinite;
+      }
+      @keyframes rotateHourglass {
+        80% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(180deg)
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>CSS Advanced Animation</h1> -->
+    <div class="container">
+      <?xml version="1.0" encoding="UTF-8"?>
+      <svg id="hourglass" style="width: 300px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1664.53959 800.0034">
+        <defs>
+          <style>
+            .cls-1 {
+              clip-path: url(#clippath);
+            }
+      
+            .cls-2 {
+              fill: none;
+            }
+      
+            .cls-2, .cls-3, .cls-4 {
+              stroke-width: 0px;
+            }
+      
+            .cls-5 {
+              clip-path: url(#clippath-1);
+            }
+      
+            .cls-4 {
+              fill: #ece70c;
+            }
+            #bottom-sand-clip {
+              animation: bottom-sand-rise 3s cubic-bezier(.2,.12,.73,.95)  infinite;
+
+            }
+            @keyframes bottom-sand-rise {
+              0%{
+                transform: translateY(300px)
+              }
+              80% {
+                transform: translateY(0px)
+              }
+              100% {
+                transform: translateY(0px)
+              }
+              
+            }
+            #top-sand-clip {
+                animation: top-sand-fall 3s cubic-bezier(.47,.13,1,.55)  infinite;
+            }
+            @keyframes top-sand-fall {
+              80% {
+                transform: translateY(350px);
+              }
+              100% {
+                transform: translateY(350px);
+              }
+            }
+          </style>
+          <clipPath id="clippath">
+            <rect id="top-sand-clip" class="cls-2" x="606.53959" y="89.00001" width="537" height="311.00004"/>
+          </clipPath>
+          <clipPath id="clippath-1">
+            <path id="bottom-sand-clip" class="cls-2" d="m0,728.00001s805.94173-271.72774,842.46066-287.52318c11.99752-5.18926,55.23617-4.04296,58.84467-1.89058,26.34037,15.71134,763.23426,289.41376,763.23426,289.41376H0Z"/>
+          </clipPath>
+        </defs>
+        <g id="sand-top">
+          <g class="cls-1">
+            <path id="sand" class="cls-4" d="m599.54128,81.00001s.49383,55,32.24692,120,56.75308,101,103.75308,139,106.20201,59.99997,139,60,65-7,111-38,72-59,95-93,17.51274-52,36.75637-97,30.24363-91,30.24363-91h-548Z"/>
+          </g>
+        </g>
+        <g id="sand-bottom">
+          <g class="cls-5">
+            <path id="sand-2" data-name="sand" class="cls-4" d="m1150.53789,711.00005s-.49383-55-32.24692-120-56.75308-101-103.75308-139-106.20201-59.99997-139-60-65,7-111,38-72,59-95,93-17.51274,52-36.75637,97-30.24363,91-30.24363,91h548Z"/>
+          </g>
+        </g>
+        <g id="hourgalss">
+          <path class="cls-3" d="m1157.18689,101.97902c9.00565-2.11797,15.71654-10.18532,15.71654-19.83691V20.39784c0-11.26301-9.13482-20.39784-20.39784-20.39784h-557.92861c-11.26301,0-20.39784,9.13483-20.39784,20.39784v61.74767c0,9.65158,6.71089,17.71893,15.71654,19.8369,6.16015,109.85598,63.21292,210.53293,155.30238,272.22959l38.49752,25.78967-38.49752,25.78967c-92.09287,61.69329-149.14563,162.37366-155.30238,272.22963-9.00565,2.11798-15.71654,10.18533-15.71654,19.83693v61.74765c0,11.26302,9.13484,20.39784,20.39784,20.39784h557.92861c11.26302,0,20.39784-9.13482,20.39784-20.39784v-61.74765c0-9.65159-6.71089-17.71895-15.71654-19.83693-6.16014-109.85597-63.2129-210.53297-155.30578-272.22961l-38.49755-25.78967,38.49755-25.78967c92.09288-61.69669,149.14564-162.37703,155.30578-272.23303v.00002Zm-542.21206-61.18333h517.13292v20.95199h-517.13292v-20.95199Zm517.13292,718.40864h-517.13292v-20.95197h517.13292v20.95197Zm-216.72371-376.14982c-5.65358,3.78719-9.04645,10.14113-9.04645,16.94721s3.39282,13.16002,9.04645,16.94721l63.79425,42.73688c80.6055,53.99648,130.85218,141.78202,137.11768,237.77429h-485.50946c6.26553-95.98885,56.51223-183.77439,137.1177-237.77429l63.79425-42.73688c5.65361-3.78719,9.04645-10.14113,9.04645-16.94721s-3.39285-13.16002-9.04645-16.94721l-63.79425-42.73688c-80.60547-53.9999-130.85217-141.78541-137.1177-237.77427h485.50946c-6.26555,95.99225-56.51223,183.77437-137.11773,237.77427l-63.79425,42.73688h.00005Z"/>
+        </g>
+      </svg>
+      </div>
+    </div>
+  </body>
+</html>

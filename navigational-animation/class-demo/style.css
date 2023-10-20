@@ -284,3 +284,10 @@ header.sticky {
 #parrot-care:target {
   scale: 1.2;
 }
+
+.sidebar {
+  transform: translateX(-250px);
+}
+.sidebar.active {
+  transform: initial;
+}

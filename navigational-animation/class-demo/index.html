@@ -14,9 +14,9 @@
   <body>
     <!-- Top Nav Bar -->
     <header>
-      <nav class="top-nav">
+      <nav class="top-nav classA"> 
         <div class="logo-and-text">
-          <div class="logo">
+          <div class="logo"> 
             <!-- Logo Placeholder -->
             <img src="parrot.png" alt="Logo" />
           </div>
@@ -115,10 +115,21 @@
 
     <!-- Include JavaScript for sidebar functionality -->
 <script>
-    // Get references to the menu elements
-    const menuToggle = document.querySelector('.menu-toggle');
-    const sidebar = document.querySelector('.sidebar');
-    const body = document.querySelector('body');
+      // Get references to the button and parent element to animate
+    const button = document.querySelector('.menu-toggle');
+    const elementToAnimate = document.querySelector('.sidebar');
+
+    // Event listener for the menu toggle button
+    button.addEventListener('click', () => {
+        const isActive = elementToAnimate.classList.contains("active")
+        
+        if (!isActive) { 
+          // Add a class that tells CSS that the element is active
+          elementToAnimate.classList.add("active")
+        } else {
+          elementToAnimate.classList.remove("active")
+        }
+    });
 
     // Function to open the sidebar
     function openSidebar() {
@@ -129,18 +140,37 @@
     // Function to close the sidebar
     function closeSidebar() {
         sidebar.style.left = '-250px'; // Adjust the width of the sidebar
-        body.style.overflow = 'auto'; // Enable scrolling when the sidebar is closed
     }
 
-    // Event listener for the menu toggle button
-    menuToggle.addEventListener('click', () => {
-        const sidebarIsOpen = sidebar.style.left === '0px';
-        if (sidebarIsOpen) {
-            closeSidebar();
-        } else {
-            openSidebar();
-        }
-    });
+
+
+
+    // // Get references to the menu elements
+    // const menuToggle = document.querySelector('.menu-toggle');
+    // const sidebar = document.querySelector('.sidebar');
+    // const body = document.querySelector('body');
+
+    // // Function to open the sidebar
+    // function openSidebar() {
+    //     sidebar.style.left = '0';
+    //     body.style.overflow = 'hidden'; // Prevent scrolling when the sidebar is open
+    // }
+
+    // // Function to close the sidebar
+    // function closeSidebar() {
+    //     sidebar.style.left = '-250px'; // Adjust the width of the sidebar
+    //     body.style.overflow = 'auto'; // Enable scrolling when the sidebar is closed
+    // }
+
+    // // Event listener for the menu toggle button
+    // menuToggle.addEventListener('click', () => {
+    //     const sidebarIsOpen = sidebar.style.left === '0px';
+    //     if (sidebarIsOpen) {
+    //         closeSidebar();
+    //     } else {
+    //         openSidebar();
+    //     }
+    // });
 
     // Animate parrot flying in
     const observer = new IntersectionObserver(entries => {
