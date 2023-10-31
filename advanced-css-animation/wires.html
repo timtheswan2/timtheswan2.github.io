@@ -82,7 +82,7 @@
       }
       [id^="electron-"]{
         offset-distance: 0; /* Start at the beginning of the path */
-        offset-rotate: auto; /* Rotate according to path direction */
+        offset-rotate: auto; /* Rotate according atto path direction */
         transform-box: fill-box;
         transform-origin: center;
       }
@@ -106,6 +106,10 @@
       }
       
       @keyframes moveAlongPath {
+        from {
+          offset-distance: 0%; /* Move to the end of the path */
+
+        }
         to {
           offset-distance: 100%; /* Move to the end of the path */
         }
